@@ -10,7 +10,7 @@ Unfortunately craft name doesn’t seem to be accessible through MSP so instead 
 - betaflight-tx-lua-scripts 1.5
 
 ## Installing
-First install [betaflight-tx-lua-scripts 1.5](https://github.com/betaflight/betaflight-tx-lua-scripts/releases/tag/1.5.0) as instructed. Then download a zip file containing the latest version of CraftName from the [releases page](releases) and unzip the files from and drag the contents to your radios SD card and overwrite any files.
+First install [betaflight-tx-lua-scripts 1.5](https://github.com/betaflight/betaflight-tx-lua-scripts/releases/tag/1.5.0) as instructed. Then download a zip file containing the latest version of CraftName from the [releases page](../../releases) and unzip the files from and drag the contents to your radios SD card and overwrite any files.
 
 ## Setting up your craft names
 
