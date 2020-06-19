@@ -18,6 +18,7 @@ Unzip the files from the link above and drag the contents to your radios SD card
 ## Setting up your craft names
 
 1. Create a switch in `Special Functions` to set the value of the global variable `GV9` from 1 to maximum on your remote. For example if you have a six position switch you can set it to set `GV9=1` to `GV9=6` and have 6 different craft names. If you have only 3 position switch then set it from `GV9=1` to `GV9=3`.
+
 ![Special Functions](/docs/images/special_functions.png)
 
 2. Go to folder `/CraftName` on your remote and add a lua script file with the craft names for each model you want support for with different vtx. For example if you have a model named `Example` and three crafts named `Craft A`, `Craft B` and `Craft C`. Then the lua script file in the folder `/CraftName` will be called `Example.lua` and have the following content:
@@ -32,6 +33,7 @@ This means that the switch in position 1 will map to `Craft A` and switch in pos
 
 ## Widget setup
 To setup the widget, add it to your screen and select the global variable `GV9` as the source. You can also adjust the size of the text with `Size`.
+
 ![Widget Settings](/docs/images/widget_settings.png)
 
 ## How to use
