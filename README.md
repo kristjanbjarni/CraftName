@@ -23,16 +23,16 @@ Unzip the files from the link above and drag the contents to your radios SD card
 2. Go to folder `/CraftName` on your remote and add a lua script file with the craft names for each model you want support for with different vtx. For example if you have a model named `Example` and three crafts named `Craft A`, `Craft B` and `Craft C`. Then the lua script file in the folder `/CraftName` will be called `Example.lua` and have the following content:
 
 ```Lua
-return {“Craft A”,“Craft B”,“Craft C”}
+return {"Craft A","Craft B","Craft C"}
 ```
 
-This means that the switch in position 1 will map to craft name `Craft A` and switch in position 2 will map to `Craft B` and etc.
+This means that the switch in position 1 will map to `Craft A` and switch in position 2 will map to `Craft B` and etc.
 
 3. This is not required but if you want to see what craft you have selected you can add the `CraftName` widget to display currently selected craft name.
 
 ## Widget setup
-To setup the widget, add it to your screen and select the global variable `GV9` as the source. You can also select the size of the text with `Size`.
-[!Widget Settings](/docs/images/widget_settings.png)
+To setup the widget, add it to your screen and select the global variable `GV9` as the source. You can also adjust the size of the text with `Size`.
+![Widget Settings](/docs/images/widget_settings.png)
 
 ## How to use
 First select the correct craft name from the switch and then launch Betaflight LUA script and it will download the needed vtx table required as usual. You can see if you are using the correct vtx table because the name of the craft is displayed in the menu like this: `vtx settings (CraftName)`. You can then change your vtx settings as usual.
