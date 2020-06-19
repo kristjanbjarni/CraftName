@@ -5,9 +5,9 @@ This is a modification of [betaflight-tx-lua-scripts](https://github.com/betafli
 Unfortunately craft name doesn’t seem to be accessible through MSP so instead we have to store the craft names on the remote and implement switching the craft name with a manual switch.
 
 ## Requirements
-- Betaflight 4.1 or newer
-- OpenTX 2.3.4 or newer
-- betaflight-tx-lua-scripts 1.5
+- [Betaflight 4.1](https://github.com/betaflight/betaflight) or newer
+- [OpenTX 2.3.4](https://www.open-tx.org/) or newer
+- [betaflight-tx-lua-scripts 1.5](https://github.com/betaflight/betaflight-tx-lua-scripts/releases/tag/1.5.0)
 
 ## Installing
 First install [betaflight-tx-lua-scripts 1.5](https://github.com/betaflight/betaflight-tx-lua-scripts/releases/tag/1.5.0) as instructed. Then download a zip file containing the latest version of CraftName from the [releases page](../../releases) and unzip the files from and drag the contents to your radios SD card and overwrite any files.
