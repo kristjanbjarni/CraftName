@@ -10,11 +10,11 @@ Unfortunately craft name doesn’t seem to be accessible through MSP so instead 
 - [betaflight-tx-lua-scripts 1.5](https://github.com/betaflight/betaflight-tx-lua-scripts/releases/tag/1.5.0)
 
 ## Installing
-First install [betaflight-tx-lua-scripts 1.5](https://github.com/betaflight/betaflight-tx-lua-scripts/releases/tag/1.5.0) as instructed. Then download a zip file containing the latest version of CraftName from the [releases page](../../releases) and unzip the files from and drag the contents to your radios SD card and overwrite any files.
+First install [betaflight-tx-lua-scripts 1.5](https://github.com/betaflight/betaflight-tx-lua-scripts/releases/tag/1.5.0) as instructed. Then download a zip file with the corresponding version of CraftName from the [releases page](../../releases) and unzip the files and drag the contents to your radios SD card and overwrite any files.
 
-## Setting up your craft names
+## Setting up craft names
 
-1. Create a switch in `Special Functions` to set the value of the global variable `GV9` from 1 to maximum on your remote. For example if you have a six position switch you can set it to set `GV9=1` to `GV9=6` and have 6 different craft names. If you have only 3 position switch then set it from `GV9=1` to `GV9=3`.
+1. Create a switch in `Special Functions` to set the value of the global variable `GV9` from 1 to maximum on your remote for your model. For example if you have a six position switch you can set it to set `GV9=1` to `GV9=6` and have 6 different craft names. If you have only 3 position switch then set it from `GV9=1` to `GV9=3`.
 
 ![Special Functions](/docs/images/special_functions.png)
 
