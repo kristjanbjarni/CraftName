@@ -6,7 +6,7 @@ Unfortunately craft name doesn’t seem to be accessible through MSP so instead 
 
 ## Requirements
 - Betaflight 4.1 or newer
-- OpenTX 2.3.4 or newer;
+- OpenTX 2.3.4 or newer
 - betaflight-tx-lua-scripts 1.5
 
 ## Installing
