@@ -1,7 +1,8 @@
 local apiVersionReceived = false
 local vtxTablesReceived = false
+local craftNameReceived = false
 local data_init, getVtxTables
-local vtxTables = loadScript("/BF/VTX/"..getCraftName()..".lua")
+local vtxTables = nil
 
 if vtxTables and vtxTables() then
     vtxTablesReceived = true
@@ -18,8 +19,21 @@ local function init()
         data_init = nil
         apiVersionReceived = true
         collectgarbage()
+    elseif not craftNameReceived then
+        lcd.drawText(6, radio.yMinLimit, "Initialising (Craft name)")
+        getCraftName = assert(loadScript("/SCRIPTS/CraftName/getCraftName.lua"))()
+        craftNameReceived = getCraftName()
+        if craftNameReceived then
+            getCraftName = nil
+            vtxTables = loadScript("/BF/VTX/"..craftName..".lua")
+            if vtxTables and vtxTables() then
+              vtxTablesReceived = true
+              vtxTables = nil
+            end
+            collectgarbage()
+         end
     elseif apiVersion >= 1.042 and not vtxTablesReceived then
-        lcd.drawText(6, radio.yMinLimit, "Downloading VTX Tables")
+        lcd.drawText(6, radio.yMinLimit, "Downloading VTX Tables for "..craftName)
         getVtxTables = getVtxTables or assert(loadScript("vtx_tables.lua"))()
         vtxTablesReceived = getVtxTables()
         if vtxTablesReceived then
@@ -29,7 +43,7 @@ local function init()
     else
         return true
     end
-    return apiVersionReceived and vtxTablesReceived
+    return apiVersionReceived and vtxTablesReceived and craftNameReceived
 end
 
 return init

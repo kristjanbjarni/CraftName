@@ -1,7 +1,7 @@
 local PageFiles = {}
 
 if apiVersion >= 1.036 then
-    PageFiles[#PageFiles + 1] = { title = "VTX Settings ("..getCraftName()..")", script = "vtx.lua" }
+    PageFiles[#PageFiles + 1] = { title = "VTX Settings ("..craftName..")", script = "vtx.lua" }
 end
 
 if apiVersion >= 1.016 then

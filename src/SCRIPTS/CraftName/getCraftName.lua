@@ -1,22 +1,32 @@
-local function getCraftName(source)
-  local craft_name = model.getInfo().name
-  if (source == nil or source==0) then
-    source = "gvar9"
-  end
-  local idx = getValue(source)
-  if (idx > 0) then
-    local craft_script,err = loadScript("/CraftName/"..craft_name..".lua")
-    if (craft_script ~= nil) then
-      local craft_names = craft_script()
-      local cn = craft_names[idx]
-      if (cn~=nil and cn~="") then
-        craft_name = cn
-      end
-    else
-      print(err)
+local MSP_NAME = 10
+
+local craftNameReceived = false
+
+local lastRunTS = 0
+local INTERVAL = 100
+
+local function processMspReply(cmd, payload)
+    if cmd == MSP_NAME then
+        local i = 1
+        craftName = ""
+        while payload[i] do
+          craftName = craftName..string.char(payload[i])
+          i = i+1
+        end
+        craftNameReceived = true
     end
-  end
-  return craft_name
+end
+
+local function getCraftName()
+    if lastRunTS + INTERVAL < getTime() then
+        lastRunTS = getTime()
+        if not craftNameReceived then
+            protocol.mspRead(MSP_NAME)
+        end
+    end
+    mspProcessTxQ()
+    processMspReply(mspPollReply())
+    return craftNameReceived
 end
 
 return getCraftName

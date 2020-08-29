@@ -76,7 +76,7 @@ local function getVtxTables()
     uiState = uiStatus.init
     PageFiles = nil
     invalidatePages()
-    io.close(io.open("/BF/VTX/"..getCraftName()..".lua", 'w'))
+    io.close(io.open("/BF/VTX/"..craftName..".lua", 'w'))
     return 0
 end
 
