@@ -1,4 +1,3 @@
-local md = model.getInfo();
 local vtx_tables = loadScript("/BF/VTX/"..craftName..".lua")
 if vtx_tables then
     vtx_tables = vtx_tables()

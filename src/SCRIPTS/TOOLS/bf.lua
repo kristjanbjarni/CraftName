@@ -2,7 +2,7 @@ local toolName = "TNS|Betaflight setup|TNE"
 chdir("/SCRIPTS/BF")
 
 apiVersion = 0
-craftName = model.getInfo().name
+craftName = nil
 
 local run = nil
 local scriptsCompiled = assert(loadScript("COMPILE/scripts_compiled.lua"))()

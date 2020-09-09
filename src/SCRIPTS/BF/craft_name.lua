@@ -8,10 +8,15 @@ local INTERVAL = 100
 local function processMspReply(cmd, payload)
     if cmd == MSP_NAME then
         local i = 1
-        craftName = ""
+        local name = ""
         while payload[i] do
-          craftName = craftName..string.char(payload[i])
-          i = i+1
+            name = name..string.char(payload[i])
+            i = i+1
+        end
+        if name == "" then
+            craftName = model.getInfo().name
+        else
+            craftName = name
         end
         craftNameReceived = true
     end
