@@ -1,5 +1,7 @@
 # Craft name for Betaflight TX Lua Scripts
 
+**NOTE: This modification has been integrated officially into [betaflight-tx-lua-scripts] from this [pull request](https://github.com/betaflight/betaflight-tx-lua-scripts/pull/361) so I recommend to use that instead.**
+
 This is a modification of [betaflight-tx-lua-scripts] to be able to configure vtx tables for different craft names. This means you can share the same model with different crafts that have different vtx hardware. The solution consist of changes to the original lua scripts to use the craft name instead of the model name.
 
 ## Requirements
